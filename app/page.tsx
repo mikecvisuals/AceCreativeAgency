@@ -1,65 +1,96 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { HeroGeometric } from "@/components/ui/shape-landing-hero";
+import AnimatedCardStack from "@/components/ui/animate-card-animation";
+import ScrollReveal from "@/components/ui/scroll-reveal";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Ace Creative Agency — Wij vertellen jouw verhaal in beeld",
+  },
+  description:
+    "Ace Creative Agency is een creatief bureau voor videoproductie, video editing en fotografie. Gebaseerd in Roosendaal — wij werken voor merken, creators en influencers door heel Nederland.",
+  alternates: { canonical: "https://acecreativeagency.nl" },
+  openGraph: {
+    title: "Ace Creative Agency — Wij vertellen jouw verhaal in beeld",
+    description:
+      "Videoproductie, video editing en fotografie voor merken, creators en influencers door heel Nederland.",
+    url: "https://acecreativeagency.nl",
+  },
+};
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      {/* Hero */}
+      <HeroGeometric
+        badge="Editor & Content Creator"
+        title1="Wij vertellen"
+        title2="jouw verhaal in beeld."
+      />
+
+      {/* Featured projects */}
+      <section style={{ width: "100%", padding: "48px 24px 96px", display: "flex", flexDirection: "column", alignItems: "center", position: "relative", zIndex: 2, backgroundColor: "#000" }}>
+        <div style={{ width: "100%", maxWidth: "800px" }}>
+          <ScrollReveal>
+            <div style={{ textAlign: "center", marginBottom: "40px" }}>
+              <h2 style={{ fontSize: "22px", fontWeight: 600, color: "#F3F5F5", marginBottom: "12px" }}>
+                Uitgelichte projecten
+              </h2>
+              <Link href="/portfolio" style={{ fontSize: "13px", color: "#555", textDecoration: "none" }}>
+                Alles bekijken →
+              </Link>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={0.1}>
+            <AnimatedCardStack />
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Services strip */}
+      <section style={{ width: "100%", borderTop: "1px solid #1a1a1a", padding: "64px 24px", display: "flex", flexDirection: "column", alignItems: "center", position: "relative", zIndex: 2, backgroundColor: "#000" }}>
+        <div style={{ width: "100%", maxWidth: "960px" }}>
+          <ScrollReveal>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "32px" }}>
+              {[
+                { label: "Edit", icon: "◈" },
+                { label: "Foto", icon: "◎" },
+                { label: "Video", icon: "◉" },
+                { label: "Social Media Management", icon: "♡" },
+              ].map(({ label, icon }) => (
+                <div key={label} style={{ textAlign: "center" }}>
+                  <div style={{ fontSize: "22px", color: "#C8A968", marginBottom: "12px" }}>{icon}</div>
+                  <p style={{ fontSize: "13px", color: "#7A7A7A" }}>{label}</p>
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section style={{ padding: "96px 24px", position: "relative", zIndex: 2, backgroundColor: "#000", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
+        <ScrollReveal style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "6px 16px", borderRadius: "9999px", border: "1px solid #333", marginBottom: "32px" }}>
+            <span style={{ width: "6px", height: "6px", borderRadius: "9999px", backgroundColor: "#C8A968", display: "inline-block", flexShrink: 0 }} />
+            <span style={{ fontSize: "12px", color: "#7A7A7A", letterSpacing: "0.2em", textTransform: "uppercase" }}>Editor & Content Creator</span>
+          </div>
+          <h2 style={{ fontSize: "clamp(1.75rem, 4vw, 3rem)", fontWeight: 600, color: "#F3F5F5", marginBottom: "24px", maxWidth: "640px" }}>
+            Klaar om samen iets{" "}
+            <span style={{ color: "#C8A968" }}>moois</span> te maken?
+          </h2>
+          <p style={{ color: "#7A7A7A", marginBottom: "32px", maxWidth: "400px", lineHeight: "1.7" }}>
+            Vertel ons over je project en we nemen snel contact met je op.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/contact"
+            style={{ padding: "14px 32px", fontSize: "16px", fontWeight: 500, backgroundColor: "#C8A968", color: "#000000", borderRadius: "9999px", display: "inline-block" }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+            Stuur een bericht
+          </Link>
+        </ScrollReveal>
+      </section>
+    </>
   );
 }
