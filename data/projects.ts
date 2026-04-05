@@ -140,7 +140,7 @@ export const projects: Project[] = [
     type: "video",
     category: "Video",
     description: "Voor Demi van Thuil was ik verantwoordelijk voor het editen van haar video's en het ontwerpen van bijpassende thumbnails. In dit proces stond het vertalen van haar persoonlijke stijl en energie centraal, zodat elke video herkenbaar en aantrekkelijk bleef voor haar doelgroep.\n\nTijdens het editen lag de focus op tempo, storytelling en visuele impact, met als doel de kijker van begin tot eind geboeid te houden. Daarnaast heb ik thumbnails ontwikkeld die niet alleen visueel opvallen, maar ook bijdragen aan een hogere doorklikratio en een consistente uitstraling van haar kanaal.\n\nDoor deze combinatie van montage en design heb ik bijgedragen aan een sterke en herkenbare online presence, waarin content en visuele identiteit naadloos op elkaar aansluiten.",
-    thumbnail: "/Scherm­afbeelding 2026-04-05 om 16.32.25.png",
+    thumbnail: "/demi-van-thuil-thumbnail.png",
     thumbnailPosition: "75% 30%",
     thumbnailZoom: 1.2,
     featured: false,
