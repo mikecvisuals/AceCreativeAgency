@@ -55,10 +55,6 @@ export const metadata: Metadata = {
       "Creatief bureau voor videoproductie, video editing en fotografie.",
     images: ["/LOGO_WIT%202.PNG"],
   },
-  icons: {
-    icon: "/LOGO_WIT%202.PNG",
-    apple: "/LOGO_WIT%202.PNG",
-  },
   robots: { index: true, follow: true },
 };
 
