@@ -201,27 +201,27 @@ export default async function ProjectPage({ params }: Props) {
                 <span style={{ width: "6px", height: "6px", borderRadius: "9999px", backgroundColor: "#C8A968", flexShrink: 0 }} />
                 <p style={{ fontSize: "11px", textTransform: "uppercase", letterSpacing: "0.3em", color: "#C8A968", fontWeight: 600 }}>Content</p>
               </div>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: "16px" }}>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: "24px", justifyItems: "center" }}>
 
                 {project.instagramUrl && (
-                  <div key="reel">
+                  <div key="reel" style={{ width: "100%" }}>
                     <InstagramEmbed url={project.instagramUrl} />
                   </div>
                 )}
 
                 {project.instagramPostUrls?.map((url) => (
-                  <div key={url}>
+                  <div key={url} style={{ width: "100%" }}>
                     <InstagramEmbed url={url} />
                   </div>
                 ))}
 
                 {project.youtubeShortIds?.map((id) => (
-                  <div key={id} style={{ borderRadius: "12px", overflow: "hidden", background: "#0f0f0f", border: "1px solid #1a1a1a" }}>
+                  <div key={id} style={{ width: "100%", borderRadius: "12px", overflow: "hidden", background: "#0f0f0f", border: "1px solid #1a1a1a", aspectRatio: "9/16" }}>
                     <iframe
                       src={`https://www.youtube.com/embed/${id}`}
                       width="100%"
-                      height="480"
-                      style={{ border: "none", display: "block", width: "100%" }}
+                      height="100%"
+                      style={{ border: "none", display: "block", width: "100%", height: "100%" }}
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                     />

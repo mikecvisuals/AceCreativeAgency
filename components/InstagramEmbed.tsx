@@ -37,9 +37,9 @@ export default function InstagramEmbed({ url }: InstagramEmbedProps) {
       style={{
         background: "#FFF",
         border: 0,
-        borderRadius: "3px",
-        margin: "0 auto",
-        maxWidth: "540px",
+        borderRadius: "12px",
+        margin: "0",
+        maxWidth: "100%",
         minWidth: "260px",
         padding: 0,
         width: "100%",
