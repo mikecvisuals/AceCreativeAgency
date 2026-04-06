@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { projects } from "@/data/projects";
 import VideoEmbed from "@/components/VideoEmbed";
+import InstagramEmbed from "@/components/InstagramEmbed";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import ImageAutoSlider from "@/components/ui/image-auto-slider";
 
@@ -202,47 +203,17 @@ export default async function ProjectPage({ params }: Props) {
               </div>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: "16px" }}>
 
-                {project.instagramUrl && (() => {
-                  const reelMatch = project.instagramUrl!.match(/reel\/([A-Za-z0-9_-]+)/);
-                  const reelId = reelMatch?.[1];
-                  if (!reelId) return null;
-                  return (
-                    <a key="reel" href={`https://www.instagram.com/reel/${reelId}/`} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", display: "block" }}>
-                      <div style={{ borderRadius: "12px", overflow: "hidden", background: "#0f0f0f", border: "1px solid #1a1a1a", aspectRatio: "9/16", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "16px", cursor: "pointer", transition: "border-color 0.2s" }}>
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#ig-grad)" strokeWidth="1.5">
-                          <defs><linearGradient id="ig-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor="#f09433"/><stop offset="25%" stopColor="#e6683c"/><stop offset="50%" stopColor="#dc2743"/><stop offset="75%" stopColor="#cc2366"/><stop offset="100%" stopColor="#bc1888"/></linearGradient></defs>
-                          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                          <circle cx="12" cy="12" r="4"/>
-                          <circle cx="17.5" cy="6.5" r="0.5" fill="url(#ig-grad)" stroke="none"/>
-                        </svg>
-                        <span style={{ fontSize: "13px", color: "#F3F5F5", fontWeight: 500 }}>Bekijk op Instagram</span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#555" strokeWidth="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-                      </div>
-                    </a>
-                  );
-                })()}
+                {project.instagramUrl && (
+                  <div key="reel">
+                    <InstagramEmbed url={project.instagramUrl} />
+                  </div>
+                )}
 
-                {project.instagramPostUrls?.map((url) => {
-                  const reelMatch = url.match(/\/reel\/([A-Za-z0-9_-]+)/);
-                  const postMatch = url.match(/\/p\/([A-Za-z0-9_-]+)/);
-                  const embedId = reelMatch?.[1] ?? postMatch?.[1];
-                  const embedType = reelMatch ? "reel" : "p";
-                  if (!embedId) return null;
-                  return (
-                    <a key={embedId} href={`https://www.instagram.com/${embedType}/${embedId}/`} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", display: "block" }}>
-                      <div style={{ borderRadius: "12px", overflow: "hidden", background: "#0f0f0f", border: "1px solid #1a1a1a", aspectRatio: "9/16", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "16px", cursor: "pointer" }}>
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#ig-grad2)" strokeWidth="1.5">
-                          <defs><linearGradient id="ig-grad2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor="#f09433"/><stop offset="25%" stopColor="#e6683c"/><stop offset="50%" stopColor="#dc2743"/><stop offset="75%" stopColor="#cc2366"/><stop offset="100%" stopColor="#bc1888"/></linearGradient></defs>
-                          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                          <circle cx="12" cy="12" r="4"/>
-                          <circle cx="17.5" cy="6.5" r="0.5" fill="url(#ig-grad2)" stroke="none"/>
-                        </svg>
-                        <span style={{ fontSize: "13px", color: "#F3F5F5", fontWeight: 500 }}>Bekijk op Instagram</span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#555" strokeWidth="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-                      </div>
-                    </a>
-                  );
-                })}
+                {project.instagramPostUrls?.map((url) => (
+                  <div key={url}>
+                    <InstagramEmbed url={url} />
+                  </div>
+                ))}
 
                 {project.youtubeShortIds?.map((id) => (
                   <div key={id} style={{ borderRadius: "12px", overflow: "hidden", background: "#0f0f0f", border: "1px solid #1a1a1a" }}>

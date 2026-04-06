@@ -1,5 +1,7 @@
 "use client";
 
+import InstagramEmbed from "@/components/InstagramEmbed";
+
 interface VideoEmbedProps {
   youtubeId?: string;
   instagramUrl?: string;
@@ -21,39 +23,11 @@ export default function VideoEmbed({ youtubeId, instagramUrl }: VideoEmbedProps)
   }
 
   if (instagramUrl) {
-    // Extract reel ID from URL
-    const reelMatch = instagramUrl.match(/reel\/([A-Za-z0-9_-]+)/);
-    const reelId = reelMatch?.[1];
-
-    if (reelId) {
-      return (
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <div style={{ width: "320px", borderRadius: "12px", overflow: "hidden", background: "#0f0f0f" }}>
-            <iframe
-              src={`https://www.instagram.com/reel/${reelId}/embed/`}
-              width="320"
-              height="568"
-              style={{ border: "none", display: "block" }}
-              allowFullScreen
-              scrolling="no"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-              sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-presentation"
-            />
-          </div>
-        </div>
-      );
-    }
-
     return (
-      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "16px", padding: "32px 0" }}>
-        <a
-          href={instagramUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "12px 24px", border: "1px solid #333", borderRadius: "9999px", fontSize: "14px", color: "#F3F5F5", textDecoration: "none" }}
-        >
-          Bekijk op Instagram
-        </a>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <div style={{ width: "100%", maxWidth: "400px" }}>
+          <InstagramEmbed url={instagramUrl} />
+        </div>
       </div>
     );
   }
