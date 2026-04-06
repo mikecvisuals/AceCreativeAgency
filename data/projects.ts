@@ -72,6 +72,14 @@ export const projects: Project[] = [
     thumbnailZoom: 1.3,
     featured: true,
     tags: ["photo"],
+    youtubeIds: ["TbxvO2ucpOs", "GMQspPycqWc"],
+    instagramPostUrls: [
+      "https://www.instagram.com/reel/DTXVAqdjLRf/",
+      "https://www.instagram.com/reel/DVGx89sDBm1/",
+      "https://www.instagram.com/reel/DUxaVsNDMPj/",
+      "https://www.instagram.com/reel/DRMeKPVDKjD/",
+      "https://www.instagram.com/reel/DP5yRypjL6e/",
+    ],
     imageSlider: true,
     images: [
       "/sdb-mik07811.jpg",
