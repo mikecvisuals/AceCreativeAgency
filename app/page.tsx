@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { HeroGeometric } from "@/components/ui/shape-landing-hero";
-import AnimatedCardStack from "@/components/ui/animate-card-animation";
+import ProjectsCarousel from "@/components/ProjectsCarousel";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 
 export const metadata: Metadata = {
@@ -29,23 +29,21 @@ export default function Home() {
         title2="jouw verhaal in beeld."
       />
 
-      {/* Featured projects */}
-      <section style={{ width: "100%", padding: "48px 24px 96px", display: "flex", flexDirection: "column", alignItems: "center", position: "relative", zIndex: 2, backgroundColor: "#000" }}>
-        <div style={{ width: "100%", maxWidth: "800px" }}>
-          <ScrollReveal>
-            <div style={{ textAlign: "center", marginBottom: "40px" }}>
-              <h2 style={{ fontSize: "22px", fontWeight: 600, color: "#F3F5F5", marginBottom: "12px" }}>
-                Uitgelichte projecten
-              </h2>
-              <Link href="/portfolio" style={{ fontSize: "13px", color: "#555", textDecoration: "none" }}>
-                Alles bekijken →
-              </Link>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal delay={0.1}>
-            <AnimatedCardStack />
-          </ScrollReveal>
-        </div>
+      {/* Projects carousel */}
+      <section style={{ width: "100%", padding: "48px 0 96px", position: "relative", zIndex: 2, backgroundColor: "#000", overflowX: "hidden" }}>
+        <ScrollReveal>
+          <div style={{ textAlign: "center", marginBottom: "32px", padding: "0 24px" }}>
+            <h2 style={{ fontSize: "22px", fontWeight: 600, color: "#F3F5F5", marginBottom: "12px" }}>
+              Projecten
+            </h2>
+            <Link href="/portfolio" style={{ fontSize: "13px", color: "#555", textDecoration: "none" }}>
+              Alles bekijken →
+            </Link>
+          </div>
+        </ScrollReveal>
+        <ScrollReveal delay={0.1}>
+          <ProjectsCarousel />
+        </ScrollReveal>
       </section>
 
       {/* Services strip */}

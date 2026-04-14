@@ -7,6 +7,9 @@
   --muted: #7A7A7A;
   --card: #0f0f0f;
   --border: #1a1a1a;
+  --ring: #C8A968;
+  --primary: #C8A968;
+  --primary-foreground: #000000;
 }
 
 @theme inline {
@@ -16,6 +19,9 @@
   --color-muted: var(--muted);
   --color-card: var(--card);
   --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
   --font-sans: var(--font-inter);
   --font-serif: var(--font-playfair);
 }
@@ -47,6 +53,15 @@ body {
 
 h1, h2, h3 {
   font-family: var(--font-playfair), Georgia, serif;
+}
+
+/* Hide scrollbar on carousel, keep scroll functionality */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 ::selection {
