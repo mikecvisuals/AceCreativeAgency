@@ -133,6 +133,20 @@ export const projects: Project[] = [
     youtubeIds: ["YB6hkMIQ5j4", "b1dUQsrF0XY", "x-JMpRKowIM"],
   },
   {
+    id: "social-next-agency",
+    title: "Social Next Agency",
+    type: "video",
+    category: "Video",
+    description: "Voor Social Next Agency ben ik actief als video-editor, waarbij ik mij voornamelijk richt op het creëren van short-form content voor social media. In deze rol vertaal ik langere video's en bestaande content naar krachtige, korte video's die geoptimaliseerd zijn voor platforms zoals TikTok, Instagram Reels en YouTube Shorts.\n\nEen van de klanten waarvoor ik content heb mogen verzorgen is FlevoNautica. Voor deze projecten ligt de focus op het trekken van de aandacht binnen de eerste seconden, het behouden van kijkers en het overbrengen van de boodschap op een creatieve en effectieve manier.\n\nDoor een combinatie van strakke montage, passende ondertiteling en een goed gevoel voor online trends zorg ik ervoor dat de content niet alleen professioneel oogt, maar ook aansluit bij het kijkgedrag van de doelgroep. Zo help ik merken hun online zichtbaarheid te vergroten en meer impact te maken op social media.",
+    thumbnail: "/social-next-agency-thumbnail.webp",
+    featured: false,
+    tiktokUrls: [
+      "https://www.tiktok.com/@flevonautica/video/7647505162797452576",
+      "https://www.tiktok.com/@flevonautica/video/7647846376432291104",
+      "https://www.tiktok.com/@flevonautica/video/7650073900973378848",
+    ],
+  },
+  {
     id: "product-shoot",
     title: "Gezin Shoots",
     type: "photo",
@@ -153,20 +167,6 @@ export const projects: Project[] = [
       "/Gezin Shoot/MIK09073.JPG",
       "/Gezin Shoot/MIK09185.JPG",
       "/Gezin Shoot/MIK09743.jpeg",
-    ],
-  },
-  {
-    id: "social-next-agency",
-    title: "Social Next Agency",
-    type: "video",
-    category: "Video",
-    description: "Voor Social Next Agency ben ik actief als video-editor, waarbij ik mij voornamelijk richt op het creëren van short-form content voor social media. In deze rol vertaal ik langere video's en bestaande content naar krachtige, korte video's die geoptimaliseerd zijn voor platforms zoals TikTok, Instagram Reels en YouTube Shorts.\n\nEen van de klanten waarvoor ik content heb mogen verzorgen is FlevoNautica. Voor deze projecten ligt de focus op het trekken van de aandacht binnen de eerste seconden, het behouden van kijkers en het overbrengen van de boodschap op een creatieve en effectieve manier.\n\nDoor een combinatie van strakke montage, passende ondertiteling en een goed gevoel voor online trends zorg ik ervoor dat de content niet alleen professioneel oogt, maar ook aansluit bij het kijkgedrag van de doelgroep. Zo help ik merken hun online zichtbaarheid te vergroten en meer impact te maken op social media.",
-    thumbnail: "/social-next-agency-thumbnail.webp",
-    featured: false,
-    tiktokUrls: [
-      "https://www.tiktok.com/@flevonautica/video/7647505162797452576",
-      "https://www.tiktok.com/@flevonautica/video/7647846376432291104",
-      "https://www.tiktok.com/@flevonautica/video/7650073900973378848",
     ],
   },
   {
