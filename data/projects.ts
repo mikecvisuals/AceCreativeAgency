@@ -157,7 +157,7 @@ export const projects: Project[] = [
     title: "Social Next Agency",
     type: "video",
     category: "Video",
-    description: "",
+    description: "Voor Social Next Agency ben ik actief als video-editor, waarbij ik mij voornamelijk richt op het creëren van short-form content voor social media. In deze rol vertaal ik langere video's en bestaande content naar krachtige, korte video's die geoptimaliseerd zijn voor platforms zoals TikTok, Instagram Reels en YouTube Shorts.\n\nEen van de klanten waarvoor ik content heb mogen verzorgen is FlevoNautica. Voor deze projecten ligt de focus op het trekken van de aandacht binnen de eerste seconden, het behouden van kijkers en het overbrengen van de boodschap op een creatieve en effectieve manier.\n\nDoor een combinatie van strakke montage, passende ondertiteling en een goed gevoel voor online trends zorg ik ervoor dat de content niet alleen professioneel oogt, maar ook aansluit bij het kijkgedrag van de doelgroep. Zo help ik merken hun online zichtbaarheid te vergroten en meer impact te maken op social media.",
     thumbnail: "/social-next-agency-thumbnail.webp",
     featured: false,
   },
