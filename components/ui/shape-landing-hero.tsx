@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 function HeroGeometric({
   badge = "Video & Fotografie",
   title1 = "Wij vertellen",
@@ -68,12 +70,12 @@ function HeroGeometric({
         </p>
 
         <div className="hero-btns" style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap", paddingBottom: "80px" }}>
-          <a href="/portfolio" style={{ padding: "14px 32px", fontSize: "16px", fontWeight: 500, backgroundColor: "#C8A968", color: "#000000", borderRadius: "9999px", display: "inline-block", textDecoration: "none" }}>
+          <Link href="/portfolio" style={{ padding: "14px 32px", fontSize: "16px", fontWeight: 500, backgroundColor: "#C8A968", color: "#000000", borderRadius: "9999px", display: "inline-block", textDecoration: "none" }}>
             Bekijk portfolio
-          </a>
-          <a href="/contact" style={{ padding: "14px 32px", fontSize: "16px", border: "1px solid #333", color: "#F3F5F5", borderRadius: "9999px", display: "inline-block", textDecoration: "none" }}>
+          </Link>
+          <Link href="/contact" style={{ padding: "14px 32px", fontSize: "16px", border: "1px solid #333", color: "#F3F5F5", borderRadius: "9999px", display: "inline-block", textDecoration: "none" }}>
             Neem contact op
-          </a>
+          </Link>
         </div>
       </div>
 

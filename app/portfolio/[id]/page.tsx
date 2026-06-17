@@ -161,7 +161,8 @@ export default async function ProjectPage({ params }: Props) {
                 <ScrollReveal key={i} delay={i * 0.1}>
                   <img
                     src={src}
-                    alt={`${project.title} — ${i + 1}`}
+                    alt={`${project.title} — foto ${i + 1}`}
+                    loading="lazy"
                     style={{ width: "100%", borderRadius: "12px", objectFit: "cover" }}
                   />
                 </ScrollReveal>

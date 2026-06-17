@@ -3,14 +3,14 @@ import Link from "next/link";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 
 export const metadata: Metadata = {
-  title: "Over ons",
+  title: "Over Mike Bogers — Video Editor & Content Creator",
   description:
-    "Leer Mike Bogers kennen — oprichter van Ace Creative Agency. Afgestudeerd aan het Grafisch Lyceum Rotterdam, met ervaring bij BNNVARA en ITV Studios als video editor en content creator.",
+    "Mike Bogers is oprichter van Ace Creative Agency in Roosendaal. Video editor en content creator met ervaring bij BNNVARA en ITV Studios. Gespecialiseerd in short-form video, fotografie en social media.",
   alternates: { canonical: "https://acecreativeagency.nl/about" },
   openGraph: {
-    title: "Over ons — Ace Creative Agency",
+    title: "Over Mike Bogers — Video Editor & Content Creator | Ace Creative Agency",
     description:
-      "Leer Mike Bogers kennen — oprichter van Ace Creative Agency. Video editor en content creator met ervaring bij BNNVARA en ITV Studios.",
+      "Mike Bogers — oprichter van Ace Creative Agency in Roosendaal. Video editor en content creator met ervaring bij BNNVARA en ITV Studios.",
     url: "https://acecreativeagency.nl/about",
   },
 };

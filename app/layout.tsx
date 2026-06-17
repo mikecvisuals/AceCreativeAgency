@@ -74,9 +74,17 @@ const organizationSchema = {
   name: "Ace Creative Agency",
   url: baseUrl,
   email: "mike@acecreativeagency.nl",
+  logo: `${baseUrl}/logo.png`,
+  image: `${baseUrl}/logo.png`,
   founder: { "@type": "Person", name: "Mike Bogers" },
   description:
     "Creatief bureau gespecialiseerd in videoproductie, video editing en fotografie.",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Roosendaal",
+    addressRegion: "Noord-Brabant",
+    addressCountry: "NL",
+  },
   areaServed: "NL",
   serviceType: [
     "Videoproductie",
