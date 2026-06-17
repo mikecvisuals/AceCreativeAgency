@@ -4,6 +4,7 @@ import Link from "next/link";
 import { projects } from "@/data/projects";
 import VideoEmbed from "@/components/VideoEmbed";
 import InstagramEmbed from "@/components/InstagramEmbed";
+import TikTokEmbed from "@/components/TikTokEmbed";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import ImageAutoSlider from "@/components/ui/image-auto-slider";
 
@@ -193,8 +194,8 @@ export default async function ProjectPage({ params }: Props) {
           </ScrollReveal>
         )}
 
-        {/* Content grid — Instagram reels/posts + YouTube Shorts */}
-        {(project.instagramPostUrls?.length || project.youtubeShortIds?.length) && (
+        {/* Content grid — Instagram reels/posts + YouTube Shorts + TikTok */}
+        {(project.instagramPostUrls?.length || project.youtubeShortIds?.length || project.tiktokUrls?.length) && (
           <ScrollReveal delay={0.2}>
             <div style={{ marginTop: "48px" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "24px" }}>
@@ -225,6 +226,12 @@ export default async function ProjectPage({ params }: Props) {
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                     />
+                  </div>
+                ))}
+
+                {project.tiktokUrls?.map((url) => (
+                  <div key={url} style={{ width: "100%" }}>
+                    <TikTokEmbed url={url} />
                   </div>
                 ))}
               </div>

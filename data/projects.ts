@@ -21,6 +21,8 @@ export interface Project {
   youtubeShortIds?: string[];
   // Regular YouTube videos (landscape 16:9)
   youtubeIds?: string[];
+  // TikTok video URLs
+  tiktokUrls?: string[];
   // For photo projects
   images?: (string | SliderImage)[];
   // Zoom thumbnail to crop edges (e.g. 1.4 = 140%)
