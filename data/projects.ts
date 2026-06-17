@@ -149,6 +149,7 @@ export const projects: Project[] = [
     category: "Video",
     description: "",
     thumbnail: "/hanwe-thumbnail.png",
+    thumbnailPosition: "center top",
     featured: false,
   },
   {
