@@ -147,7 +147,7 @@ export const projects: Project[] = [
     title: "Hanwe",
     type: "video",
     category: "Video",
-    description: "",
+    description: "Voor content creator Hanwe ben ik verantwoordelijk voor de montage van zijn YouTube-video's. Zijn content bestaat voornamelijk uit reactievideo's, waarin hij op een humoristische en kritische manier reageert op populaire televisieprogramma's, online trends en opvallende internetmomenten. Denk hierbij aan programma's zoals Temptation Island.\n\nBij het editen ligt de focus op het creëren van een hoog tempo, sterke timing en het versterken van de humor binnen de video's. Door middel van dynamische montage, passende effecten en een vloeiende verhaallijn zorg ik ervoor dat de content boeiend blijft van begin tot eind.\n\nDoor nauw samen te werken met Hanwe draag ik bij aan video's die aansluiten bij zijn unieke persoonlijkheid en stijl, terwijl de kwaliteit en betrokkenheid van de content continu gewaarborgd blijven. Deze samenwerking heeft mij verder ontwikkeld in het monteren van entertainmentcontent voor een groot online publiek en het begrijpen van wat kijkers aanspreekt op platforms zoals YouTube.",
     thumbnail: "/hanwe-thumbnail.png",
     thumbnailPosition: "center top",
     featured: false,
