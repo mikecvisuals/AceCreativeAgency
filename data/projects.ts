@@ -151,6 +151,7 @@ export const projects: Project[] = [
     thumbnail: "/hanwe-thumbnail.png",
     thumbnailPosition: "center top",
     featured: false,
+    youtubeIds: ["ga_qEcYUAkQ", "E-sCQVOi4_g", "a4R52r4l8MA"],
   },
   {
     id: "social-next-agency",
