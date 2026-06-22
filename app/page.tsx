@@ -20,6 +20,86 @@ export const metadata: Metadata = {
   },
 };
 
+const testimonials = [
+  {
+    text: "Mike heeft al meerdere shoots voor ons gedaan en we zijn elke keer super tevreden. Hij werkt nauwkeurig, denkt mee en luistert echt naar wat je wilt. Dat maakt het samenwerken heel fijn. Echt een aanrader 😊",
+    name: "Sabrina de Bruijn",
+    role: "SDB Coaching",
+    rating: 5,
+  },
+  {
+    text: "Hele mooie professionele foto's laten maken door Mike tijdens het trainen. De foto's zijn erg gedetailleerd. Ik ben zeer tevreden over het eind resultaat.",
+    name: "Dennis Elst",
+    role: "Google Review",
+    rating: 5,
+  },
+  {
+    text: "Tijdje geleden een gezinsshoot gedaan bij Mike. Er hing een super relaxte sfeer en hij hielp ons ook heel goed met poses etc. De foto's waren uiteindelijk zo ontzettend mooi geworden, dus zeker een aanrader!!",
+    name: "Ashley Timmers",
+    role: "Google Review",
+    rating: 5,
+  },
+];
+
+function ReviewCard({ text, name, role, rating }: { text: string; name: string; role: string; rating: number }) {
+  return (
+    <div style={{ flex: "1 1 260px", padding: "24px", borderRadius: "16px", border: "1px solid rgba(255,255,255,0.08)", backgroundColor: "#0a0a0a" }}>
+      <div style={{ display: "flex", gap: "2px", marginBottom: "12px" }}>
+        {Array.from({ length: rating }).map((_, s) => (
+          <svg key={s} width="13" height="13" viewBox="0 0 24 24" fill="#C8A968"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" /></svg>
+        ))}
+      </div>
+      <p style={{ fontSize: "14px", color: "#A0A0A0", lineHeight: 1.65, marginBottom: "16px" }}>&ldquo;{text}&rdquo;</p>
+      <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+        <div style={{ width: "36px", height: "36px", borderRadius: "9999px", backgroundColor: "#1a1a1a", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "14px", fontWeight: 600, color: "#C8A968", flexShrink: 0 }}>
+          {name.charAt(0)}
+        </div>
+        <div>
+          <p style={{ fontSize: "13px", fontWeight: 600, color: "#F3F5F5" }}>{name}</p>
+          <p style={{ fontSize: "12px", color: "#555" }}>{role}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function TestimonialsSection() {
+  return (
+    <section style={{ width: "100%", padding: "80px 0", backgroundColor: "#000", position: "relative", zIndex: 2 }}>
+      <div style={{ textAlign: "center", marginBottom: "48px", padding: "0 24px" }}>
+        <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "4px 14px", borderRadius: "9999px", border: "1px solid #333", marginBottom: "20px" }}>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="#C8A968">
+            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+          </svg>
+          <span style={{ fontSize: "11px", color: "#7A7A7A", letterSpacing: "0.2em", textTransform: "uppercase" }}>Reviews</span>
+        </div>
+        <h2 style={{ fontSize: "clamp(1.5rem, 4vw, 2rem)", fontWeight: 600, color: "#F3F5F5", marginBottom: "12px" }}>
+          Wat klanten over ons <span style={{ color: "#C8A968" }}>zeggen</span>
+        </h2>
+        <p style={{ fontSize: "14px", color: "#555", maxWidth: "400px", margin: "0 auto" }}>
+          Beoordeeld met een gemiddelde van 5 sterren op Google
+        </p>
+      </div>
+
+      {/* Mobile: horizontale scroll */}
+      <div className="flex md:hidden" style={{ overflowX: "auto", gap: "12px", padding: "0 24px 8px", scrollbarWidth: "none" }}>
+        {testimonials.map((t, i) => (
+          <div key={i} style={{ flexShrink: 0, width: "270px" }}>
+            <ReviewCard {...t} />
+          </div>
+        ))}
+      </div>
+
+      {/* Desktop: 3 kaarten naast elkaar */}
+      <div className="hidden md:flex" style={{ gap: "16px", padding: "0 48px", maxWidth: "1100px", margin: "0 auto" }}>
+        {testimonials.map((t, i) => (
+          <ReviewCard key={i} {...t} />
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   return (
     <>
@@ -29,6 +109,44 @@ export default function Home() {
         title1="Wij vertellen"
         title2="jouw verhaal in beeld."
       />
+
+      {/* Services strip */}
+      <section style={{ width: "100%", borderTop: "1px solid #1a1a1a", padding: "64px 24px", display: "flex", flexDirection: "column", alignItems: "center", position: "relative", zIndex: 2, backgroundColor: "#000" }}>
+        <div style={{ width: "100%", maxWidth: "960px" }}>
+          <ScrollReveal>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "32px" }}>
+              {[
+                { label: "Edit", icon: "◈" },
+                { label: "Foto", icon: "◎" },
+                { label: "Video", icon: "◉" },
+                { label: "Social Media Management", icon: "♡" },
+              ].map(({ label, icon }) => (
+                <div key={label} style={{ textAlign: "center" }}>
+                  <div style={{ fontSize: "22px", color: "#C8A968", marginBottom: "12px" }}>{icon}</div>
+                  <p style={{ fontSize: "13px", color: "#7A7A7A" }}>{label}</p>
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Projects carousel */}
+      <section style={{ width: "100%", padding: "48px 0 96px", position: "relative", zIndex: 2, backgroundColor: "#000", overflowX: "hidden" }}>
+        <ScrollReveal>
+          <div style={{ textAlign: "center", marginBottom: "32px", padding: "0 24px" }}>
+            <h2 style={{ fontSize: "22px", fontWeight: 600, color: "#F3F5F5", marginBottom: "12px" }}>
+              Projecten
+            </h2>
+            <Link href="/portfolio" style={{ fontSize: "13px", color: "#555", textDecoration: "none" }}>
+              Alles bekijken →
+            </Link>
+          </div>
+        </ScrollReveal>
+        <ScrollReveal delay={0.1}>
+          <ProjectsCarousel />
+        </ScrollReveal>
+      </section>
 
       {/* Portrait video slider */}
       <section style={{ width: "100%", padding: "80px 0", backgroundColor: "#000", position: "relative", zIndex: 2 }}>
@@ -54,43 +172,8 @@ export default function Home() {
         />
       </section>
 
-      {/* Projects carousel */}
-      <section style={{ width: "100%", padding: "48px 0 96px", position: "relative", zIndex: 2, backgroundColor: "#000", overflowX: "hidden" }}>
-        <ScrollReveal>
-          <div style={{ textAlign: "center", marginBottom: "32px", padding: "0 24px" }}>
-            <h2 style={{ fontSize: "22px", fontWeight: 600, color: "#F3F5F5", marginBottom: "12px" }}>
-              Projecten
-            </h2>
-            <Link href="/portfolio" style={{ fontSize: "13px", color: "#555", textDecoration: "none" }}>
-              Alles bekijken →
-            </Link>
-          </div>
-        </ScrollReveal>
-        <ScrollReveal delay={0.1}>
-          <ProjectsCarousel />
-        </ScrollReveal>
-      </section>
-
-      {/* Services strip */}
-      <section style={{ width: "100%", borderTop: "1px solid #1a1a1a", padding: "64px 24px", display: "flex", flexDirection: "column", alignItems: "center", position: "relative", zIndex: 2, backgroundColor: "#000" }}>
-        <div style={{ width: "100%", maxWidth: "960px" }}>
-          <ScrollReveal>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "32px" }}>
-              {[
-                { label: "Edit", icon: "◈" },
-                { label: "Foto", icon: "◎" },
-                { label: "Video", icon: "◉" },
-                { label: "Social Media Management", icon: "♡" },
-              ].map(({ label, icon }) => (
-                <div key={label} style={{ textAlign: "center" }}>
-                  <div style={{ fontSize: "22px", color: "#C8A968", marginBottom: "12px" }}>{icon}</div>
-                  <p style={{ fontSize: "13px", color: "#7A7A7A" }}>{label}</p>
-                </div>
-              ))}
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
+      {/* Testimonials */}
+      <TestimonialsSection />
 
       {/* CTA */}
       <section style={{ padding: "96px 24px", position: "relative", zIndex: 2, backgroundColor: "#000", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
