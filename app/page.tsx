@@ -162,10 +162,13 @@ export default function Home() {
           slides={[
             { type: "youtube", youtubeId: "xRICVIOfsfo", label: "Raoul" },
             { type: "tiktok", tiktokUrl: "https://www.tiktok.com/@flevonautica/video/7647505162797452576", label: "FlevoNautica" },
+            { type: "instagram", instagramUrl: "https://www.instagram.com/reel/C4N_T_ct1r6/", label: "Russo" },
             { type: "youtube", youtubeId: "TJnhf092bL4", label: "Raoul" },
             { type: "tiktok", tiktokUrl: "https://www.tiktok.com/@flevonautica/video/7647846376432291104", label: "FlevoNautica" },
+            { type: "instagram", instagramUrl: "https://www.instagram.com/reel/C0ep7YzsR_d/", label: "Russo" },
             { type: "youtube", youtubeId: "ZUcQNLzgpso", label: "Raoul" },
             { type: "tiktok", tiktokUrl: "https://www.tiktok.com/@flevonautica/video/7650073900973378848", label: "FlevoNautica" },
+            { type: "instagram", instagramUrl: "https://www.instagram.com/reel/Cwhz8efsXOT/", label: "Russo" },
             { type: "youtube", youtubeId: "eS3QtcZDdsw", label: "Raoul" },
             { type: "tiktok", tiktokUrl: "https://www.tiktok.com/@flevonautica/video/7653035915811523872", label: "FlevoNautica" },
             { type: "youtube", youtubeId: "bSVjcv0-zXY", label: "Raoul" },
