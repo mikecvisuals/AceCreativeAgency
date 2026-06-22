@@ -3,6 +3,7 @@ import Link from "next/link";
 import { HeroGeometric } from "@/components/ui/shape-landing-hero";
 import ProjectsCarousel from "@/components/ProjectsCarousel";
 import ScrollReveal from "@/components/ui/scroll-reveal";
+import PortraitVideoSlider from "@/components/ui/portrait-video-slider-client";
 
 export const metadata: Metadata = {
   title: {
@@ -28,6 +29,30 @@ export default function Home() {
         title1="Wij vertellen"
         title2="jouw verhaal in beeld."
       />
+
+      {/* Portrait video slider */}
+      <section style={{ width: "100%", padding: "80px 0", backgroundColor: "#000", position: "relative", zIndex: 2 }}>
+        <ScrollReveal>
+          <div style={{ textAlign: "center", marginBottom: "48px", padding: "0 24px" }}>
+            <p style={{ fontSize: "11px", textTransform: "uppercase", letterSpacing: "0.3em", color: "#555", marginBottom: "12px" }}>Short-form content</p>
+            <h2 style={{ fontSize: "clamp(1.5rem, 4vw, 2rem)", fontWeight: 600, color: "#F3F5F5" }}>
+              Ons <span style={{ color: "#C8A968" }}>werk</span> in beeld
+            </h2>
+          </div>
+        </ScrollReveal>
+        <PortraitVideoSlider
+          slides={[
+            { type: "youtube", youtubeId: "xRICVIOfsfo", label: "Raoul" },
+            { type: "tiktok", tiktokUrl: "https://www.tiktok.com/@flevonautica/video/7647505162797452576", label: "Social Next Agency" },
+            { type: "youtube", youtubeId: "TJnhf092bL4", label: "Raoul" },
+            { type: "tiktok", tiktokUrl: "https://www.tiktok.com/@flevonautica/video/7647846376432291104", label: "Social Next Agency" },
+            { type: "youtube", youtubeId: "ZUcQNLzgpso", label: "Raoul" },
+            { type: "tiktok", tiktokUrl: "https://www.tiktok.com/@flevonautica/video/7650073900973378848", label: "Social Next Agency" },
+            { type: "youtube", youtubeId: "eS3QtcZDdsw", label: "Raoul" },
+            { type: "youtube", youtubeId: "bSVjcv0-zXY", label: "Raoul" },
+          ]}
+        />
+      </section>
 
       {/* Projects carousel */}
       <section style={{ width: "100%", padding: "48px 0 96px", position: "relative", zIndex: 2, backgroundColor: "#000", overflowX: "hidden" }}>
