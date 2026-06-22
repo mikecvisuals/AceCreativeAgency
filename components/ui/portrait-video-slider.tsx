@@ -30,11 +30,11 @@ function videoSrc(slide: VideoSlide): string {
   return "";
 }
 
-function useTikTokThumbnail(url?: string) {
+function useThumbnailFromApi(apiPath: string, url?: string) {
   const [thumbnail, setThumbnail] = useState<string | null>(null);
   useEffect(() => {
     if (!url) return;
-    fetch(`/api/tiktok-thumbnail?url=${encodeURIComponent(url)}`)
+    fetch(`${apiPath}?url=${encodeURIComponent(url)}`)
       .then((r) => r.json())
       .then((d) => { if (d.thumbnail_url) setThumbnail(d.thumbnail_url); })
       .catch(() => {});
@@ -53,11 +53,13 @@ function InstagramPlaceholder() {
 }
 
 function VideoCard({ slide, isPlaying, onClick }: { slide: VideoSlide; isPlaying: boolean; onClick: () => void }) {
-  const tiktokThumbnail = useTikTokThumbnail(slide.type === "tiktok" ? slide.tiktokUrl : undefined);
+  const tiktokThumbnail = useThumbnailFromApi("/api/tiktok-thumbnail", slide.type === "tiktok" ? slide.tiktokUrl : undefined);
+  const instagramThumbnail = useThumbnailFromApi("/api/instagram-thumbnail", slide.type === "instagram" ? slide.instagramUrl : undefined);
 
   const thumbnail = slide.type === "youtube" && slide.youtubeId
     ? `https://img.youtube.com/vi/${slide.youtubeId}/hqdefault.jpg`
     : slide.type === "tiktok" ? tiktokThumbnail
+    : slide.type === "instagram" ? instagramThumbnail
     : null;
 
   function handleClick() {
@@ -97,10 +99,10 @@ function VideoCard({ slide, isPlaying, onClick }: { slide: VideoSlide; isPlaying
         </div>
       ) : (
         <>
-          {slide.type === "instagram" ? (
-            <InstagramPlaceholder />
-          ) : thumbnail ? (
+          {thumbnail ? (
             <img src={thumbnail} alt={slide.label ?? "Video"} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+          ) : slide.type === "instagram" ? (
+            <InstagramPlaceholder />
           ) : (
             <div style={{ width: "100%", height: "100%", background: "#0f0f0f" }} />
           )}
