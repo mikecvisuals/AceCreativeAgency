@@ -161,13 +161,16 @@ export default function Home() {
         <PortraitVideoSlider
           slides={[
             { type: "youtube", youtubeId: "xRICVIOfsfo", label: "Raoul" },
-            { type: "tiktok", tiktokUrl: "https://www.tiktok.com/@flevonautica/video/7647505162797452576", label: "Social Next Agency" },
+            { type: "tiktok", tiktokUrl: "https://www.tiktok.com/@flevonautica/video/7647505162797452576", label: "FlevoNautica" },
             { type: "youtube", youtubeId: "TJnhf092bL4", label: "Raoul" },
-            { type: "tiktok", tiktokUrl: "https://www.tiktok.com/@flevonautica/video/7647846376432291104", label: "Social Next Agency" },
+            { type: "tiktok", tiktokUrl: "https://www.tiktok.com/@flevonautica/video/7647846376432291104", label: "FlevoNautica" },
             { type: "youtube", youtubeId: "ZUcQNLzgpso", label: "Raoul" },
-            { type: "tiktok", tiktokUrl: "https://www.tiktok.com/@flevonautica/video/7650073900973378848", label: "Social Next Agency" },
+            { type: "tiktok", tiktokUrl: "https://www.tiktok.com/@flevonautica/video/7650073900973378848", label: "FlevoNautica" },
             { type: "youtube", youtubeId: "eS3QtcZDdsw", label: "Raoul" },
+            { type: "tiktok", tiktokUrl: "https://www.tiktok.com/@flevonautica/video/7653035915811523872", label: "FlevoNautica" },
             { type: "youtube", youtubeId: "bSVjcv0-zXY", label: "Raoul" },
+            { type: "tiktok", tiktokUrl: "https://www.tiktok.com/@flevonautica/video/7652658822967774496", label: "FlevoNautica" },
+            { type: "tiktok", tiktokUrl: "https://www.tiktok.com/@flevonautica/video/7651922264752934177", label: "FlevoNautica" },
           ]}
         />
       </section>

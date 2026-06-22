@@ -144,6 +144,9 @@ export const projects: Project[] = [
       "https://www.tiktok.com/@flevonautica/video/7647505162797452576",
       "https://www.tiktok.com/@flevonautica/video/7647846376432291104",
       "https://www.tiktok.com/@flevonautica/video/7650073900973378848",
+      "https://www.tiktok.com/@flevonautica/video/7653035915811523872",
+      "https://www.tiktok.com/@flevonautica/video/7652658822967774496",
+      "https://www.tiktok.com/@flevonautica/video/7651922264752934177",
     ],
   },
   {
