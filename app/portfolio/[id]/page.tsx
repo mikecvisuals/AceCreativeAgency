@@ -45,15 +45,42 @@ export default async function ProjectPage({ params }: Props) {
 
   if (!project) notFound();
 
-  const creativeWorkSchema = {
+  const baseUrl = "https://acecreativeagency.nl";
+  const pageUrl = `${baseUrl}/portfolio/${project.id}`;
+  const shortDesc = project.description.split("\n\n")[0];
+
+  const creativeWorkSchema = project.type === "video" && project.youtubeId
+    ? {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        name: project.title,
+        description: shortDesc,
+        creator: { "@type": "Person", name: "Mike Bogers" },
+        url: pageUrl,
+        thumbnailUrl: `${baseUrl}${project.thumbnail}`,
+        embedUrl: `https://www.youtube.com/embed/${project.youtubeId}`,
+        contentUrl: `https://www.youtube.com/watch?v=${project.youtubeId}`,
+        uploadDate: "2024-01-01",
+      }
+    : {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        name: project.title,
+        description: shortDesc,
+        creator: { "@type": "Person", name: "Mike Bogers" },
+        url: pageUrl,
+        ...(project.thumbnail ? { image: `${baseUrl}${project.thumbnail}` } : {}),
+        genre: project.category,
+      };
+
+  const breadcrumbSchema = {
     "@context": "https://schema.org",
-    "@type": "CreativeWork",
-    name: project.title,
-    description: project.description.split("\n\n")[0],
-    creator: { "@type": "Person", name: "Mike Bogers" },
-    url: `https://acecreativeagency.nl/portfolio/${project.id}`,
-    ...(project.thumbnail ? { image: `https://acecreativeagency.nl${project.thumbnail}` } : {}),
-    genre: project.category,
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
+      { "@type": "ListItem", position: 2, name: "Portfolio", item: `${baseUrl}/portfolio` },
+      { "@type": "ListItem", position: 3, name: project.title, item: pageUrl },
+    ],
   };
 
   return (
@@ -61,6 +88,10 @@ export default async function ProjectPage({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(creativeWorkSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <div style={{ width: "100%", maxWidth: "800px" }}>
 

@@ -100,9 +100,104 @@ function TestimonialsSection() {
   );
 }
 
+const aggregateRatingSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Ace Creative Agency",
+  url: "https://acecreativeagency.nl",
+  email: "mike@acecreativeagency.nl",
+  image: "https://acecreativeagency.nl/logo.png",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Roosendaal",
+    addressRegion: "Noord-Brabant",
+    addressCountry: "NL",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 51.5302,
+    longitude: 4.4632,
+  },
+  areaServed: "NL",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    reviewCount: "3",
+    bestRating: "5",
+    worstRating: "1",
+  },
+  review: [
+    {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      author: { "@type": "Person", name: "Sabrina de Bruijn" },
+      reviewBody: "Mike heeft al meerdere shoots voor ons gedaan en we zijn elke keer super tevreden. Hij werkt nauwkeurig, denkt mee en luistert echt naar wat je wilt.",
+    },
+    {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      author: { "@type": "Person", name: "Dennis Elst" },
+      reviewBody: "Hele mooie professionele foto's laten maken door Mike tijdens het trainen. De foto's zijn erg gedetailleerd. Ik ben zeer tevreden over het eind resultaat.",
+    },
+    {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      author: { "@type": "Person", name: "Ashley Timmers" },
+      reviewBody: "Tijdje geleden een gezinsshoot gedaan bij Mike. Er hing een super relaxte sfeer en hij hielp ons ook heel goed met poses etc. De foto's waren uiteindelijk zo ontzettend mooi geworden.",
+    },
+  ],
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Wat doet Ace Creative Agency?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Ace Creative Agency is een creatief bureau in Roosendaal gespecialiseerd in videoproductie, video editing, fotografie en social media management. We werken voor merken, content creators en influencers door heel Nederland.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "In welke regio werkt Ace Creative Agency?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Ons bureau is gevestigd in Roosendaal (Noord-Brabant), maar we werken door heel Nederland. We zijn actief in West-Brabant, maar ook landelijk inzetbaar voor video- en fotoproducties.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Welke diensten biedt Ace Creative Agency aan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Wij bieden videoproductie, professionele video editing, fotografie (portret, sport, bedrijf) en social media management aan. Ook short-form video voor YouTube Shorts, TikTok en Instagram Reels behoort tot ons specialisme.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Hoe kan ik contact opnemen met Ace Creative Agency?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Je kunt contact opnemen via het contactformulier op onze website (acecreativeagency.nl/contact) of via e-mail op mike@acecreativeagency.nl. We reageren doorgaans binnen 24 uur.",
+      },
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateRatingSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero */}
       <HeroGeometric
         badge="Editor & Content Creator"

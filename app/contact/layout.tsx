@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact — Videoproductie & Fotografie aanvragen",
   description:
-    "Neem contact op met Ace Creative Agency. Heb je een project in gedachten? Vul het formulier in of stuur een e-mail — we reageren binnen 24 uur.",
+    "Neem contact op met Ace Creative Agency in Roosendaal. Heb je een project in gedachten voor videoproductie, video editing of fotografie? We reageren binnen 24 uur.",
   alternates: { canonical: "https://acecreativeagency.nl/contact" },
   openGraph: {
     title: "Contact — Ace Creative Agency",

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Portfolio — Videoproductie & Fotografie in Nederland",
   description:
-    "Bekijk het werk van Ace Creative Agency — videoproducties, edits en fotoshoots voor merken, content creators en influencers zoals Raoul (Bankzitters), Russo en ITV Studios.",
+    "Bekijk het werk van Ace Creative Agency — videoproducties, edits en fotoshoots voor merken, content creators en influencers zoals Raoul (Bankzitters), Russo en ITV Studios. Gebaseerd in Roosendaal.",
   alternates: { canonical: "https://acecreativeagency.nl/portfolio" },
   openGraph: {
     title: "Portfolio — Ace Creative Agency",
