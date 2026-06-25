@@ -4,6 +4,8 @@ import { HeroGeometric } from "@/components/ui/shape-landing-hero";
 import ProjectsCarousel from "@/components/ProjectsCarousel";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import PortraitVideoSlider from "@/components/ui/portrait-video-slider-client";
+import LandscapeVideoSlider from "@/components/ui/landscape-video-slider-client";
+import { projects } from "@/data/projects";
 
 export const metadata: Metadata = {
   title: {
@@ -188,6 +190,11 @@ const faqSchema = {
 };
 
 export default function Home() {
+  const landscapeSlides = projects.flatMap((p) => {
+    const ids = p.youtubeIds ?? (p.youtubeId ? [p.youtubeId] : []);
+    return ids.map((youtubeId) => ({ youtubeId, projectTitle: p.title, projectId: p.id }));
+  });
+
   return (
     <>
       <script
@@ -276,6 +283,19 @@ export default function Home() {
             { type: "tiktok", tiktokUrl: "https://www.tiktok.com/@flevonautica/video/7651922264752934177", label: "FlevoNautica" },
           ]}
         />
+      </section>
+
+      {/* Landscape video slider */}
+      <section style={{ width: "100%", padding: "80px 0", backgroundColor: "#000", position: "relative", zIndex: 2 }}>
+        <ScrollReveal>
+          <div style={{ textAlign: "center", marginBottom: "48px", padding: "0 24px" }}>
+            <p style={{ fontSize: "11px", textTransform: "uppercase", letterSpacing: "0.3em", color: "#555", marginBottom: "12px" }}>Long-form content</p>
+            <h2 style={{ fontSize: "clamp(1.5rem, 4vw, 2rem)", fontWeight: 600, color: "#F3F5F5" }}>
+              Recent <span style={{ color: "#C8A968" }}>werk</span>
+            </h2>
+          </div>
+        </ScrollReveal>
+        <LandscapeVideoSlider slides={landscapeSlides} />
       </section>
 
       {/* Testimonials */}
