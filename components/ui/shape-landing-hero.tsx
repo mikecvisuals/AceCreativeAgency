@@ -12,7 +12,7 @@ function HeroGeometric({
   title2?: string;
 }) {
   return (
-    <div style={{ position: "relative", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", height: "100vh", maxHeight: "100vh", background: "#000000", overflow: "hidden" }}>
+    <div style={{ position: "relative", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", height: "100vh", maxHeight: "100vh", background: "#000000", overflow: "hidden", paddingTop: "80px" }}>
       <style>{`
         @keyframes fadeUp {
           from { opacity: 0; transform: translateY(24px); }
@@ -69,7 +69,7 @@ function HeroGeometric({
           Ace Creative Agency is gespecialiseerd in video, foto en social media management — voor influencers, bedrijven en persoonlijke projecten.
         </p>
 
-        <div className="hero-btns" style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap", paddingBottom: "80px" }}>
+        <div className="hero-btns" style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
           <Link href="/portfolio" style={{ padding: "14px 32px", fontSize: "16px", fontWeight: 500, backgroundColor: "#C8A968", color: "#000000", borderRadius: "9999px", display: "inline-block", textDecoration: "none" }}>
             Bekijk portfolio
           </Link>

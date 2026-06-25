@@ -66,7 +66,6 @@ export const projects: Project[] = [
     description: `Voor Russo heb ik de visuele storytelling van zijn populaire serie "The One Hour Challenge" naar een hoger niveau getild.\n\nIk creëerde dynamische short-form social content die de energie, snelheid en herkenbare stijl van de serie versterkt. Door ritme, humor en visuele timing centraal te zetten, werden de contentstukken perfect geschikt voor platformen als TikTok, Instagram Reels en YouTube Shorts.\n\nDaarnaast heb ik Russo tweemaal voorzien van een Spotify Canvas, loopbare visuals die zijn tracks extra identiteit geven binnen Spotify. De canvassen zijn volledig afgestemd op zijn sound, merkuitstraling en serie-stijl, waardoor luisteraars een consistente creatieve beleving krijgen.`,
     thumbnail: "/russo-thumbnail.jpg",
     featured: true,
-    youtubeId: "dQw4w9WgXcQ",
     instagramPostUrls: [
       "https://www.instagram.com/p/CxNyUBzMlC3/",
       "https://www.instagram.com/p/Cxxz3MEMogX/",
