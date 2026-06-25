@@ -12,7 +12,7 @@ function HeroGeometric({
   title2?: string;
 }) {
   return (
-    <div style={{ position: "relative", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", height: "100vh", maxHeight: "100vh", background: "#000000", overflow: "hidden", paddingTop: "80px" }}>
+    <div style={{ position: "relative", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", minHeight: "100vh", background: "#000000", overflow: "hidden", paddingTop: "80px", paddingBottom: "40px" }}>
       <style>{`
         @keyframes fadeUp {
           from { opacity: 0; transform: translateY(24px); }
