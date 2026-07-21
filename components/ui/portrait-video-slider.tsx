@@ -136,7 +136,7 @@ export default function PortraitVideoSlider({ slides }: { slides: VideoSlide[] }
   return (
     <Carousel
       opts={{ loop: true, align: "start" }}
-      plugins={[AutoScroll({ playOnInit: true, speed: 1.2, stopOnInteraction: true, stopOnMouseEnter: true })]}
+      plugins={[AutoScroll({ playOnInit: true, speed: 1.2, stopOnInteraction: false, stopOnMouseEnter: false })]}
     >
       <CarouselContent className="ml-0" style={{ gap: "16px" }}>
         {looped.map((slide, i) => {
