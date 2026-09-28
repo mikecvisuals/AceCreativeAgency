@@ -262,7 +262,9 @@ export default function Home() {
         </ScrollReveal>
         <PortraitVideoSlider
           slides={[
+            { type: "local", src: "/videos/vi-coaching/VICOACHING_SEPTEMBER_AD1_V2.mp4", poster: "/vi-coaching-thumbnail.jpg", label: "VI Coaching" },
             { type: "youtube", youtubeId: "xRICVIOfsfo", label: "Raoul" },
+            { type: "local", src: "/videos/vi-coaching/VICOACHING_SEPTEMBER_AD2_V2.mp4", poster: "/vi-coaching-thumbnail.jpg", label: "VI Coaching" },
             { type: "tiktok", tiktokUrl: "https://www.tiktok.com/@flevonautica/video/7647505162797452576", label: "FlevoNautica" },
             { type: "instagram", instagramUrl: "https://www.instagram.com/reel/C4N_T_ct1r6/", label: "Russo" },
             { type: "instagram", instagramUrl: "https://www.instagram.com/reel/DVGx89sDBm1/", label: "SDB Coaching" },
@@ -277,10 +279,12 @@ export default function Home() {
             { type: "youtube", youtubeId: "eS3QtcZDdsw", label: "Raoul" },
             { type: "tiktok", tiktokUrl: "https://www.tiktok.com/@flevonautica/video/7653035915811523872", label: "FlevoNautica" },
             { type: "instagram", instagramUrl: "https://www.instagram.com/reel/DYwesi9MMGu/", label: "SDB Coaching" },
+            { type: "local", src: "/videos/vi-coaching/VICOACHING_SEPTEMBER_AD3_V2.mp4", poster: "/vi-coaching-thumbnail.jpg", label: "VI Coaching" },
             { type: "youtube", youtubeId: "bSVjcv0-zXY", label: "Raoul" },
             { type: "tiktok", tiktokUrl: "https://www.tiktok.com/@flevonautica/video/7652658822967774496", label: "FlevoNautica" },
             { type: "instagram", instagramUrl: "https://www.instagram.com/reel/DWOXj97sLyn/", label: "SDB Coaching" },
             { type: "tiktok", tiktokUrl: "https://www.tiktok.com/@flevonautica/video/7651922264752934177", label: "FlevoNautica" },
+            { type: "local", src: "/videos/vi-coaching/VICOACHING_SEPTEMBER_AD4_V2.mp4", poster: "/vi-coaching-thumbnail.jpg", label: "VI Coaching" },
           ]}
         />
       </section>

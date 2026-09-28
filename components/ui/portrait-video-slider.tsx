@@ -5,10 +5,12 @@ import { useState, useEffect } from "react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 
 type VideoSlide = {
-  type: "tiktok" | "youtube" | "instagram";
+  type: "tiktok" | "youtube" | "instagram" | "local";
   tiktokUrl?: string;
   youtubeId?: string;
   instagramUrl?: string;
+  src?: string;
+  poster?: string;
   label?: string;
 };
 
@@ -60,6 +62,7 @@ function VideoCard({ slide, isPlaying, onClick }: { slide: VideoSlide; isPlaying
     ? `https://img.youtube.com/vi/${slide.youtubeId}/hqdefault.jpg`
     : slide.type === "tiktok" ? tiktokThumbnail
     : slide.type === "instagram" ? instagramThumbnail
+    : slide.type === "local" ? slide.poster ?? null
     : null;
 
   function handleClick() {
@@ -90,12 +93,23 @@ function VideoCard({ slide, isPlaying, onClick }: { slide: VideoSlide; isPlaying
     >
       {isPlaying ? (
         <div style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
-          <iframe
-            src={videoSrc(slide)}
-            style={{ width: "100%", height: "100%", border: "none", display: "block" }}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
+          {slide.type === "local" && slide.src ? (
+            <video
+              src={slide.src}
+              poster={slide.poster}
+              autoPlay
+              controls
+              playsInline
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+            />
+          ) : (
+            <iframe
+              src={videoSrc(slide)}
+              style={{ width: "100%", height: "100%", border: "none", display: "block" }}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          )}
         </div>
       ) : (
         <>
