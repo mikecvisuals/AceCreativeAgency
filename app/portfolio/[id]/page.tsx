@@ -226,6 +226,25 @@ export default async function ProjectPage({ params }: Props) {
           </ScrollReveal>
         )}
 
+        {/* Self-hosted videos (not yet published on any platform) */}
+        {project.localVideos?.length && (
+          <ScrollReveal delay={0.2}>
+            <div style={{ marginTop: "48px" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "24px" }}>
+                <span style={{ width: "6px", height: "6px", borderRadius: "9999px", backgroundColor: "#C8A968", flexShrink: 0 }} />
+                <p style={{ fontSize: "11px", textTransform: "uppercase", letterSpacing: "0.3em", color: "#C8A968", fontWeight: 600 }}>Video's</p>
+              </div>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: "16px" }}>
+                {project.localVideos.map((src) => (
+                  <div key={src} style={{ borderRadius: "12px", overflow: "hidden", background: "#0f0f0f", border: "1px solid #1a1a1a", aspectRatio: "9/16" }}>
+                    <video src={src} controls playsInline preload="metadata" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </ScrollReveal>
+        )}
+
         {/* Content grid — Instagram reels/posts + YouTube Shorts + TikTok */}
         {(project.instagramPostUrls?.length || project.youtubeShortIds?.length || project.tiktokUrls?.length) && (
           <ScrollReveal delay={0.2}>

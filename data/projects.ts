@@ -23,6 +23,8 @@ export interface Project {
   youtubeIds?: string[];
   // TikTok video URLs
   tiktokUrls?: string[];
+  // Self-hosted video files (e.g. not yet published anywhere), served from /public
+  localVideos?: string[];
   // For photo projects
   images?: (string | SliderImage)[];
   // Zoom thumbnail to crop edges (e.g. 1.4 = 140%)
@@ -34,6 +36,34 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    id: "marco-spadaro",
+    title: "Marco Spadaro",
+    type: "video",
+    category: "Video",
+    description: "Voor Marco Spadaro ben ik verantwoordelijk voor de montage van zijn YouTube-video's. Hierbij staat het vertalen van zijn persoonlijke stijl en energie centraal, zodat elke video herkenbaar en aantrekkelijk blijft voor zijn doelgroep.\n\nTijdens het editen ligt de focus op tempo, storytelling en visuele impact, met als doel de kijker van begin tot eind geboeid te houden.",
+    thumbnail: "/marco-spadaro-thumbnail.jpeg",
+    thumbnailPosition: "center top",
+    thumbnailZoom: 1.15,
+    featured: false,
+    youtubeIds: ["pN-o_lhRsI8"],
+  },
+  {
+    id: "vi-coaching",
+    title: "VI Coaching",
+    type: "video",
+    category: "Video",
+    description: "Voor VI Coaching ben ik verantwoordelijk voor de montage van short-form advertenties. Hierbij ligt de focus op het snel grijpen van de aandacht, een strak tempo en een heldere boodschap, zodat de content optimaal presteert als advertentie op social media.\n\nDoor scherpe montage, doordachte pacing en een sterke call-to-action help ik VI Coaching hun doelgroep te bereiken en te converteren via short-form video content.",
+    thumbnail: "/vi-coaching-thumbnail.jpg",
+    thumbnailPosition: "center 40%",
+    featured: false,
+    localVideos: [
+      "/videos/vi-coaching/VICOACHING_SEPTEMBER_AD1_V2.mp4",
+      "/videos/vi-coaching/VICOACHING_SEPTEMBER_AD2_V2.mp4",
+      "/videos/vi-coaching/VICOACHING_SEPTEMBER_AD3_V2.mp4",
+      "/videos/vi-coaching/VICOACHING_SEPTEMBER_AD4_V2.mp4",
+    ],
+  },
   {
     id: "raoul",
     title: "Raoul",
