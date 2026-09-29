@@ -131,7 +131,7 @@ export default function AboutPage() {
         </h2>
         <TeamGrid
           members={[
-            { id: "mike", src: "/mike-bogers-team.jpg", name: "Mike Bogers", role: "Eigenaar, Editor & Content Creator", objectPosition: "center top" },
+            { id: "mike", src: "/mike-bogers-team.jpg", name: "Mike Bogers", role: "Eigenaar, editor & content creator", objectPosition: "center top" },
             { id: "denise", src: "/denise-wuijster-thumbnail.jpg", name: "Denise Wuijster", role: "Freelance editor" },
           ]}
         />
