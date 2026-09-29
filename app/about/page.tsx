@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/scroll-reveal";
-import ImageAccordion from "@/components/ui/image-accordion";
+import TeamGrid from "@/components/ui/team-grid";
 
 export const metadata: Metadata = {
   title: "Over Mike Bogers — Video Editor & Content Creator",
@@ -129,10 +129,10 @@ export default function AboutPage() {
         <h2 style={{ fontSize: "clamp(1.5rem, 4vw, 2rem)", fontWeight: 600, color: "#F3F5F5", marginBottom: "32px", textAlign: "center" }}>
           Ons <span style={{ color: "#C8A968" }}>Ace Creative Agency</span> Team
         </h2>
-        <ImageAccordion
-          items={[
-            { id: "mike", src: "/mike-bogers-team.jpg", alt: "Mike Bogers — Eigenaar, Editor & Content Creator", label: "Mike Bogers — Eigenaar, Editor & Content Creator", objectPosition: "center top" },
-            { id: "denise", src: "/denise-wuijster-thumbnail.jpg", alt: "Denise Wuijster — Freelance editor", label: "Denise Wuijster — Freelance editor" },
+        <TeamGrid
+          members={[
+            { id: "mike", src: "/mike-bogers-team.jpg", name: "Mike Bogers", role: "Eigenaar, Editor & Content Creator", objectPosition: "center top" },
+            { id: "denise", src: "/denise-wuijster-thumbnail.jpg", name: "Denise Wuijster", role: "Freelance editor" },
           ]}
         />
       </ScrollReveal>
