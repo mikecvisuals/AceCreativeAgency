@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/scroll-reveal";
+import ImageAccordion from "@/components/ui/image-accordion";
 
 export const metadata: Metadata = {
   title: "Over Mike Bogers — Video Editor & Content Creator",
@@ -44,9 +45,9 @@ export default function AboutPage() {
           <span style={{ color: "#C8A968" }}>kracht van beeld.</span>
         </h1>
         <p style={{ fontSize: "17px", color: "#7A7A7A", lineHeight: 1.7, maxWidth: "560px", marginBottom: "80px" }}>
-          Ace Creative Agency is een creatief bureau gespecialiseerd in
-          videoproductie en fotografie. We werken met passie aan projecten
-          die een verhaal vertellen en een indruk achterlaten.
+          Ace Creative Agency is een creatief bureau in Roosendaal,
+          gespecialiseerd in videoproductie en fotografie voor merken,
+          content creators en influencers door heel Nederland.
         </p>
       </ScrollReveal>
 
@@ -56,13 +57,14 @@ export default function AboutPage() {
           <div style={{ textAlign: "left" }}>
             <h2 style={{ fontSize: "18px", fontWeight: 600, color: "#F3F5F5", marginBottom: "16px" }}>Onze aanpak</h2>
             <p style={{ color: "#7A7A7A", lineHeight: 1.7, marginBottom: "16px", fontSize: "15px" }}>
-              Elk project begint met een gesprek. We willen jouw verhaal
-              begrijpen, jouw doelen kennen en jouw doelgroep leren kennen.
-              Vanuit die basis bouwen we een creatief concept dat echt werkt.
+              Elk project begint met een gesprek: wat wil je vertellen, aan
+              wie, en waarom nu? Vanuit die antwoorden bouwen we een concept
+              dat past bij jouw merk, niet bij een sjabloon.
             </p>
             <p style={{ color: "#7A7A7A", lineHeight: 1.7, fontSize: "15px" }}>
-              Van pre-productie tot de eindoplevering — we begeleiden je door
-              het hele proces en zorgen voor een resultaat waar je trots op bent.
+              Van pre-productie tot de eindoplevering blijven we betrokken.
+              Geen losse freelancer die verdwijnt na de opnamedag, maar iemand
+              die het hele traject bewaakt.
             </p>
           </div>
           <div style={{ textAlign: "left" }}>
@@ -101,42 +103,38 @@ export default function AboutPage() {
         </div>
       </ScrollReveal>
 
-      {/* Wie ben ik */}
+      {/* Het ontstaan */}
       <ScrollReveal delay={0.3} style={{ width: "100%", maxWidth: "800px" }}>
         <div style={{ borderTop: "1px solid #1a1a1a", paddingTop: "80px", marginBottom: "80px" }}>
-          <p style={{ fontSize: "11px", textTransform: "uppercase", letterSpacing: "0.3em", color: "#555", marginBottom: "16px", textAlign: "center" }}>De persoon achter het werk</p>
+          <p style={{ fontSize: "11px", textTransform: "uppercase", letterSpacing: "0.3em", color: "#555", marginBottom: "16px", textAlign: "center" }}>Het ontstaan</p>
           <h2 style={{ fontSize: "clamp(1.75rem, 5vw, 2.5rem)", fontWeight: 600, color: "#F3F5F5", marginBottom: "48px", textAlign: "center" }}>
-            Wie ben <span style={{ color: "#C8A968" }}>ik?</span>
+            Hoe <span style={{ color: "#C8A968" }}>Ace Creative Agency</span> ontstond
           </h2>
 
-          <div style={{ display: "flex", flexDirection: "row", gap: "48px", alignItems: "flex-start", flexWrap: "wrap" }}>
-            {/* Photo */}
-            <div style={{ flexShrink: 0, width: "260px", maxWidth: "100%" }}>
-              <img
-                src="/mike-bogers.jpg"
-                alt="Mike Bogers — Editor & Content Creator bij Ace Creative Agency"
-                width={780}
-                height={1040}
-                style={{ width: "100%", borderRadius: "16px", objectFit: "cover", aspectRatio: "3/4", display: "block" }}
-              />
-              <p style={{ marginTop: "16px", fontSize: "14px", fontWeight: 600, color: "#F3F5F5", textAlign: "center" }}>Mike Bogers</p>
-              <p style={{ fontSize: "12px", color: "#C8A968", textAlign: "center", marginTop: "4px" }}>Editor & Content Creator</p>
-            </div>
-
-            {/* Bio */}
-            <div style={{ flex: 1, minWidth: "240px", textAlign: "left", display: "flex", flexDirection: "column", gap: "16px" }}>
-              {[
-                "Mijn naam is Mike Bogers, geboren en getogen in Roosendaal. Al op jonge leeftijd ontwikkelde ik een sterke interesse in video en fotografie. Wat begon als een hobby, groeide al snel uit tot mijn grootste passie, en uiteindelijk mijn droombaan.",
-                "Mijn reis begon op het Grafisch Lyceum in Rotterdam, waar ik in 2020 ben afgestudeerd. Tijdens mijn opleiding heb ik mijn creatieve en technische vaardigheden verder ontwikkeld en geleerd om verhalen visueel tot leven te brengen.",
-                "Na mijn studie heb ik waardevolle ervaring opgedaan bij BNNVARA en ITV Studios, waar ik de fijne kneepjes van het vak heb geleerd op het gebied van radio en televisieproductie. Deze professionele basis neem ik mee in elk project waar ik aan werk.",
-                "Daarnaast ben ik actief in de wereld van online content en werk ik samen met influencers. Zo heb ik onder andere shorts geproduceerd voor YouTube en TikTok voor Raoul (bekend van de Bankzitters) en Russo. Hierdoor ben ik sterk thuis in het creëren van content die aansluit bij de snelle en dynamische online wereld.",
-                "Met een combinatie van creativiteit, technische kennis en praktijkervaring help ik merken en makers om hun verhaal krachtig en visueel aantrekkelijk te vertellen.",
-              ].map((para, i) => (
-                <p key={i} style={{ color: "#7A7A7A", lineHeight: 1.8, fontSize: "15px" }}>{para}</p>
-              ))}
-            </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: "16px", textAlign: "left" }}>
+            {[
+              "Ace Creative Agency startte ik in 2020, vlak na mijn afstuderen aan het Grafisch Lyceum in Rotterdam. Er was geen masterplan. Ik nam freelance klussen aan naast een vaste baan en keek gewoon waar het heen ging. Een paar jaar later sta ik er nog steeds, en inmiddels met veel meer overtuiging dan in het begin.",
+              "Die vaste baan was bij BNNVARA, en later bij ITV Studios. Dat liep gewoon naast elkaar: overdag het vak leren binnen de televisiewereld, ernaast 's avonds en in het weekend aan mijn eigen klanten werken. Wat ik bij de een oppikte, gebruikte ik meteen bij de ander.",
+              "De naam Ace komt niet uit een merknaam-generator of brainstormsessie. Hij is vernoemd naar mijn zoontje. Als ik iets bouw, wil ik dat het zijn naam waardig is.",
+              "Die eerste freelance klusjes zijn intussen uitgegroeid tot een bureau dat merken, content creators en influencers door heel Nederland helpt met hun verhaal.",
+            ].map((para, i) => (
+              <p key={i} style={{ color: "#7A7A7A", lineHeight: 1.8, fontSize: "15px" }}>{para}</p>
+            ))}
           </div>
         </div>
+      </ScrollReveal>
+
+      {/* Werk in beeld */}
+      <ScrollReveal delay={0.35} style={{ width: "100%", maxWidth: "1000px", marginBottom: "80px" }}>
+        <h2 style={{ fontSize: "clamp(1.5rem, 4vw, 2rem)", fontWeight: 600, color: "#F3F5F5", marginBottom: "32px", textAlign: "center" }}>
+          Ons <span style={{ color: "#C8A968" }}>Ace Creative Agency</span> Team
+        </h2>
+        <ImageAccordion
+          items={[
+            { id: "mike", src: "/mike-bogers-team.jpg", alt: "Mike Bogers — Eigenaar, Editor & Content Creator", label: "Mike Bogers — Eigenaar, Editor & Content Creator", objectPosition: "center top" },
+            { id: "denise", src: "/denise-wuijster-thumbnail.jpg", alt: "Denise Wuijster — Freelance editor", label: "Denise Wuijster — Freelance editor" },
+          ]}
+        />
       </ScrollReveal>
 
       {/* CTA */}

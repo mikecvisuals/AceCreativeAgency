@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     absolute: "Ace Creative Agency — Wij vertellen jouw verhaal in beeld",
   },
   description:
-    "Ace Creative Agency is een creatief bureau voor videoproductie, video editing en fotografie. Gebaseerd in Roosendaal — wij werken voor merken, creators en influencers door heel Nederland.",
+    "Creatief bureau in Roosendaal voor videoproductie, video editing en fotografie. Actief voor merken, content creators en influencers door heel Nederland.",
   alternates: { canonical: "https://acecreativeagency.nl" },
   openGraph: {
     title: "Ace Creative Agency — Wij vertellen jouw verhaal in beeld",
