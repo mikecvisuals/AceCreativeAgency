@@ -37,6 +37,17 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "vetfitmetfleur",
+    title: "VetFitMetFleur",
+    type: "video",
+    category: "Video",
+    description: "Voor Fleur van VetFitMetFleur edit ik de YouTube-video's en ontwerp ik de thumbnails erbij. Een thumbnail moet in één oogopslag duidelijk maken waar de video over gaat, dus die werk ik uit in dezelfde herkenbare stijl als haar kanaal.\n\nBij de montage ligt de nadruk op een helder tempo, zodat de kijker van begin tot eind blijft kijken.",
+    thumbnail: "/vetfitmetfleur-thumbnail.jpg",
+    thumbnailPosition: "75% center",
+    featured: false,
+    youtubeIds: ["C03HgITyxGk"],
+  },
+  {
     id: "marco-spadaro",
     title: "Marco Spadaro",
     type: "video",
@@ -46,7 +57,7 @@ export const projects: Project[] = [
     thumbnailPosition: "center top",
     thumbnailZoom: 1.15,
     featured: false,
-    youtubeIds: ["pN-o_lhRsI8"],
+    youtubeIds: ["pN-o_lhRsI8", "x-H8C4LtNmI"],
   },
   {
     id: "vi-coaching",
@@ -86,7 +97,7 @@ export const projects: Project[] = [
     thumbnail: "/hanwe-thumbnail.png",
     thumbnailPosition: "center top",
     featured: false,
-    youtubeIds: ["ga_qEcYUAkQ", "E-sCQVOi4_g", "a4R52r4l8MA", "q4uDFG7tLEg", "GFyefEtWzHQ"],
+    youtubeIds: ["ga_qEcYUAkQ", "E-sCQVOi4_g", "a4R52r4l8MA", "q4uDFG7tLEg", "GFyefEtWzHQ", "dBqYy1G6eo4", "PqvBNlxc3bk"],
   },
   {
     id: "russo",

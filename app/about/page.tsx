@@ -132,7 +132,8 @@ export default function AboutPage() {
         <TeamGrid
           members={[
             { id: "mike", src: "/mike-bogers-team.jpg", name: "Mike Bogers", role: "Eigenaar, editor & content creator", objectPosition: "center top" },
-            { id: "denise", src: "/denise-wuijster-thumbnail.jpg", name: "Denise Wuijster", role: "Freelance editor" },
+            { id: "denise", src: "/denise-wuijster-thumbnail.jpg", name: "Denise Wuijster", role: "Editor" },
+            { id: "valarie", src: "/valarie-simonis-team.jpg", name: "Valarie Simonis", role: "Social Media Manager", objectPosition: "center top" },
           ]}
         />
       </ScrollReveal>
