@@ -41,6 +41,18 @@ const testimonials = [
     role: "Google Review",
     rating: 5,
   },
+  {
+    text: "Wij werken inmiddels al een aantal maanden samen met Mike, bij wie wij onze short-form video edits uit handen geven voor een aantal klanten. Als je iemand zoekt die snel kan schakelen, super flexibel en kwaliteitsgedreven is, dan ben je bij Mike zeker aan het juiste adres!",
+    name: "Robbert Groot",
+    role: "Social Next Agency",
+    rating: 5,
+  },
+  {
+    text: "Sinds een paar maanden werk ik met ACE samen en ik ben er heel tevreden over! Snelle communicatie, denkt goed mee en levert alles op tijd aan. Erg fijn!",
+    name: "Fleur Hogenkamp",
+    role: "VetFitMetFleur",
+    rating: 5,
+  },
 ];
 
 function ReviewCard({ text, name, role, rating }: { text: string; name: string; role: string; rating: number }) {
@@ -124,7 +136,7 @@ const aggregateRatingSchema = {
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "5",
-    reviewCount: "3",
+    reviewCount: "5",
     bestRating: "5",
     worstRating: "1",
   },
@@ -146,6 +158,18 @@ const aggregateRatingSchema = {
       reviewRating: { "@type": "Rating", ratingValue: "5" },
       author: { "@type": "Person", name: "Ashley Timmers" },
       reviewBody: "Tijdje geleden een gezinsshoot gedaan bij Mike. Er hing een super relaxte sfeer en hij hielp ons ook heel goed met poses etc. De foto's waren uiteindelijk zo ontzettend mooi geworden.",
+    },
+    {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      author: { "@type": "Person", name: "Robbert Groot" },
+      reviewBody: "Wij werken inmiddels al een aantal maanden samen met Mike, bij wie wij onze short-form video edits uit handen geven voor een aantal klanten. Als je iemand zoekt die snel kan schakelen, super flexibel en kwaliteitsgedreven is, dan ben je bij Mike zeker aan het juiste adres!",
+    },
+    {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5" },
+      author: { "@type": "Person", name: "Fleur Hogenkamp" },
+      reviewBody: "Sinds een paar maanden werk ik met ACE samen en ik ben er heel tevreden over! Snelle communicatie, denkt goed mee en levert alles op tijd aan. Erg fijn!",
     },
   ],
 };
