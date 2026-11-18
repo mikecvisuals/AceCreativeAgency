@@ -45,7 +45,7 @@ export const projects: Project[] = [
     thumbnail: "/vetfitmetfleur-thumbnail.jpg",
     thumbnailPosition: "75% center",
     featured: false,
-    youtubeIds: ["C03HgITyxGk"],
+    youtubeIds: ["C03HgITyxGk", "6BB8UsF6BpU", "D5i62pPSmf0", "8dGGwL7d1Qo"],
   },
   {
     id: "marco-spadaro",
@@ -57,7 +57,7 @@ export const projects: Project[] = [
     thumbnailPosition: "center top",
     thumbnailZoom: 1.15,
     featured: false,
-    youtubeIds: ["pN-o_lhRsI8", "x-H8C4LtNmI"],
+    youtubeIds: ["pN-o_lhRsI8", "x-H8C4LtNmI", "DzGd5gprHS8", "PfELni9Jgns"],
   },
   {
     id: "vi-coaching",
