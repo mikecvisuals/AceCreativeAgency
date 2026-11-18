@@ -55,14 +55,15 @@ function InstagramPlaceholder() {
 }
 
 function VideoCard({ slide, isPlaying, onClick }: { slide: VideoSlide; isPlaying: boolean; onClick: () => void }) {
-  const tiktokThumbnail = useThumbnailFromApi("/api/tiktok-thumbnail", slide.type === "tiktok" ? slide.tiktokUrl : undefined);
+  const tiktokThumbnail = useThumbnailFromApi("/api/tiktok-thumbnail", slide.type === "tiktok" && !slide.poster ? slide.tiktokUrl : undefined);
   const instagramThumbnail = useThumbnailFromApi("/api/instagram-thumbnail", slide.type === "instagram" ? slide.instagramUrl : undefined);
 
-  const thumbnail = slide.type === "youtube" && slide.youtubeId
+  const thumbnail = slide.poster
+    ? slide.poster
+    : slide.type === "youtube" && slide.youtubeId
     ? `https://img.youtube.com/vi/${slide.youtubeId}/hqdefault.jpg`
     : slide.type === "tiktok" ? tiktokThumbnail
     : slide.type === "instagram" ? instagramThumbnail
-    : slide.type === "local" ? slide.poster ?? null
     : null;
 
   function handleClick() {
